@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="19086" started-at="2020-08-09T16:01:17Z" finished-at="2020-08-09T16:01:36Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="19086" started-at="2020-08-09T16:01:17Z" finished-at="2020-08-09T16:01:36Z">
+      <class name="com.tests.WebPageTest">
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.tests.WebPageTest@2d6e8792]" name="testSetUp" is-config="true" duration-ms="2989" started-at="2020-08-09T21:31:17Z" finished-at="2020-08-09T21:31:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="GetWeatherDataFromNDTVPage(org.testng.ITestContext, java.lang.String)[pri:0, instance:com.tests.WebPageTest@2d6e8792]" name="GetWeatherDataFromNDTVPage" duration-ms="13613" started-at="2020-08-09T21:31:20Z" data-provider="CityNameDP" finished-at="2020-08-09T21:31:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@30814f43]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mumbai]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetWeatherDataFromNDTVPage -->
+      </class> <!-- com.tests.WebPageTest -->
+      <class name="com.tests.CompareWeatherDataTest">
+        <test-method status="PASS" signature="CompareWeather(org.testng.ITestContext, int, int)[pri:0, instance:com.tests.CompareWeatherDataTest@3f3afe78]" name="CompareWeather" duration-ms="1" started-at="2020-08-09T21:31:36Z" data-provider="VarianceDP" finished-at="2020-08-09T21:31:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@30814f43]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[15]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CompareWeather -->
+      </class> <!-- com.tests.CompareWeatherDataTest -->
+      <class name="com.tests.OpenWeatherAPITest">
+        <test-method status="PASS" signature="GetWeatherDetails(org.testng.ITestContext, java.lang.String)[pri:0, instance:com.tests.OpenWeatherAPITest@4411d970]" name="GetWeatherDetails" duration-ms="2474" started-at="2020-08-09T21:31:34Z" data-provider="CityNameDP" finished-at="2020-08-09T21:31:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@30814f43]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mumbai]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetWeatherDetails -->
+      </class> <!-- com.tests.OpenWeatherAPITest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

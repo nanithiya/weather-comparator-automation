@@ -1,0 +1,7 @@
+com\tests\WebPageTest.class
+com\tests\BaseAPITest.class
+com\tests\OpenWeatherAPITest.class
+com\validators\Validator.class
+com\tests\CompareWeatherDataTest.class
+com\dataproviders\CompareWeatherDataProvider.class
+com\dataproviders\WeatherDataProvider.class
