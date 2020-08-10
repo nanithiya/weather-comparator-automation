@@ -8,7 +8,7 @@ public class Validator {
 		Assert.assertTrue(result, message);
 	}
 
-	public static void ValidateAPIKeyValue(String actual, String expected) {
+	public static void ValidateEqual(String actual, String expected) {
 		Assert.assertEquals(actual, expected);
 	}
 }

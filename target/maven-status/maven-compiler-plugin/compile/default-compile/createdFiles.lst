@@ -1,6 +1,7 @@
 com\helpers\StringUtils.class
-com\pojo\WeatherData.class
 com\apiconfigs\ApiEndpoints.class
+com\web\pages\NdtvPage.class
 com\helpers\ApiResponseReader.class
 com\apiconfigs\ApiHeaders.class
 com\helpers\ApiAgent.class
+com\web\pages\PageBase.class

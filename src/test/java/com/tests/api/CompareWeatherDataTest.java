@@ -1,4 +1,4 @@
-package com.tests;
+package com.tests.api;
 
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
@@ -10,7 +10,7 @@ public class CompareWeatherDataTest {
 
 	// Get variance values (temperature and humidity from data provider
 	// (configurable))
-	@Test(dataProvider = "VarianceDP", dataProviderClass = CompareWeatherDataProvider.class)
+	@Test(dataProvider = "VarianceDP", dataProviderClass = CompareWeatherDataProvider.class, description = "Compares weather reporting done by UI and API")
 	public void CompareWeather(ITestContext context, int temperatureVariance, int humidityVariance) throws Exception {
 
 		// Get temperature and humidity from the context. (API)

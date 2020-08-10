@@ -1,26 +1,16 @@
-package com.tests;
+package com.web.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
-import com.dataproviders.WeatherDataProvider;
 import com.helpers.StringUtils;
-import com.validators.Validator;
 
-public class WebPageTest {
-
-	private WebDriver driver;
-	String appURL = "https://ndtv.com";
+public class NdtvPage extends PageBase {
+	public static String appURL = "https://ndtv.com";
 
 	@FindBy(id = "h_sub_menu")
 	WebElement subMenu;
@@ -40,56 +30,60 @@ public class WebPageTest {
 	@FindBy(xpath = "//span[@style='margin-bottom:10px']")
 	WebElement cityText;
 
-	@BeforeClass
-	public void Setup() {
-		System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver.exe");
-		driver = new ChromeDriver();
-		PageFactory.initElements(driver, this);
+	public NdtvPage(WebDriver driver) {
+		super(driver);
 	}
 
-	@Test(dataProvider = "CityNameDP", dataProviderClass = WeatherDataProvider.class)
-	public void GetWeatherDataFromNDTVPage(ITestContext context, String city) {
+	public void OpenNDTVUrl() {
 		driver.navigate().to(appURL);
 		driver.manage().window().maximize();
+	}
 
+	public void ClickSubMenu() {
 		subMenu.click();
+	}
+
+	public void ClickWeatherMenu() {
 		weatherMenu.click();
+	}
 
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-
-		String searchXpath = "//*[@class='searchBox']";
-
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(searchXpath)));
+	public void SearchCity(String city) {
+		wait.until(ExpectedConditions.elementToBeClickable(searchTextbox));
 		searchTextbox.clear();
 		searchTextbox.click();
 		searchTextbox.sendKeys(city);
+	}
 
+	public void SelectCityFromDropDown(String city) {
 		String dropdownCityXpath = "//*[@for='" + city + "']/input";
 		String checked = driver.findElement(By.xpath(dropdownCityXpath)).getAttribute("class");
 
 		if (checked.equalsIgnoreCase("")) {
 			driver.findElement(By.xpath(dropdownCityXpath)).click();
 		}
+	}
 
+	public void ClickPinCity(String city) {
 		String pinCityXpath = "//*[@title='" + city + "']";
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pinCityXpath)));
 		driver.findElement(By.xpath(pinCityXpath)).click();
+	}
 
-		String cityNameXpath = "//*[@title='" + city + "']";
-		driver.findElement(By.xpath(cityNameXpath)).getText();
-
-		String expectedCityName = cityText.getText();
+	public String GetWeatherData(ITestContext context) {
 		String humidity = humidityText.getText();
 		String temprature = tempratureText.getText();
 
-		Validator.ValidateResult(expectedCityName.contains(city), "Invalid city selected");
-
 		context.setAttribute("webTemprature", StringUtils.ExtractDigitsFromString(temprature));
 		context.setAttribute("webHumidity", StringUtils.ExtractDigitsFromString(humidity));
+
+		return cityText.getText();
 	}
 
-	@AfterClass
-	public void tearDown() {
-		driver.quit();
+	public String GetHomePageTitle() {
+		return driver.getTitle();
+	}
+
+	public String GetWeatherPageTitle() {
+		return driver.getTitle();
 	}
 }

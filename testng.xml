@@ -3,9 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.tests.WebPageTest"/>
-      <class name="com.tests.OpenWeatherAPITest"/>
-      <class name="com.tests.CompareWeatherDataTest"/>
+      <class name="com.tests.web.NdtvPageTest"/>
+      <class name="com.tests.api.OpenWeatherAPITest"/>
+      <class name="com.tests.api.CompareWeatherDataTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.598 sec - in TestSuite
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.999 sec <<< FAILURE! - in TestSuite
+CompareWeather(com.tests.api.CompareWeatherDataTest)  Time elapsed: 0.007 sec  <<< FAILURE!
+java.lang.NumberFormatException: empty String
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)
+	at sun.misc.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
+	at java.lang.Float.parseFloat(Float.java:451)
+	at com.tests.api.CompareWeatherDataTest.CompareWeather(CompareWeatherDataTest.java:22)
+

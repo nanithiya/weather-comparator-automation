@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
     <classes>
-      <class name="com.tests.WebPageTest">
+      <class name="com.tests.api.CompareWeatherDataTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="GetWeatherDataFromNDTVPage" invocation-numbers="0"/>
-          <include name="Setup"/>
+          <include name="CompareWeather" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.tests.WebPageTest -->
+      </class> <!-- com.tests.api.CompareWeatherDataTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

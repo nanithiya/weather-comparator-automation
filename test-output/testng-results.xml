@@ -1,43 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="19808" started-at="2020-08-10T04:05:41Z" finished-at="2020-08-10T04:06:01Z">
+  <suite name="Suite" duration-ms="12974" started-at="2020-08-10T14:10:02Z" finished-at="2020-08-10T14:10:15Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="19808" started-at="2020-08-10T04:05:41Z" finished-at="2020-08-10T04:06:01Z">
-      <class name="com.tests.WebPageTest">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:com.tests.WebPageTest@5e3a8624]" name="Setup" is-config="true" duration-ms="2872" started-at="2020-08-10T09:35:41Z" finished-at="2020-08-10T09:35:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="GetWeatherDataFromNDTVPage(org.testng.ITestContext, java.lang.String)[pri:0, instance:com.tests.WebPageTest@5e3a8624]" name="GetWeatherDataFromNDTVPage" duration-ms="11981" started-at="2020-08-10T09:35:44Z" data-provider="CityNameDP" finished-at="2020-08-10T09:35:56Z">
+    <test name="Test" duration-ms="12974" started-at="2020-08-10T14:10:02Z" finished-at="2020-08-10T14:10:15Z">
+      <class name="com.tests.api.CompareWeatherDataTest">
+        <test-method status="PASS" signature="CompareWeather(org.testng.ITestContext, int, int)[pri:0, instance:com.tests.api.CompareWeatherDataTest@1ed6388a]" name="CompareWeather" duration-ms="1" started-at="2020-08-10T19:40:15Z" description="Compares weather reporting done by UI and API" data-provider="VarianceDP" finished-at="2020-08-10T19:40:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4bdeaabb]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Mumbai]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetWeatherDataFromNDTVPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.WebPageTest@5e3a8624]" name="tearDown" is-config="true" duration-ms="732" started-at="2020-08-10T09:35:56Z" finished-at="2020-08-10T09:35:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.tests.WebPageTest -->
-      <class name="com.tests.CompareWeatherDataTest">
-        <test-method status="PASS" signature="CompareWeather(org.testng.ITestContext, int, int)[pri:0, instance:com.tests.CompareWeatherDataTest@29774679]" name="CompareWeather" duration-ms="0" started-at="2020-08-10T09:36:01Z" data-provider="VarianceDP" finished-at="2020-08-10T09:36:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4bdeaabb]]>
+                <![CDATA[org.testng.TestRunner@1f9e9475]]>
               </value>
             </param>
             <param index="1">
@@ -54,13 +28,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CompareWeather -->
-      </class> <!-- com.tests.CompareWeatherDataTest -->
-      <class name="com.tests.OpenWeatherAPITest">
-        <test-method status="PASS" signature="GetWeatherDetails(org.testng.ITestContext, java.lang.String)[pri:0, instance:com.tests.OpenWeatherAPITest@1bce4f0a]" name="GetWeatherDetails" duration-ms="4196" started-at="2020-08-10T09:35:57Z" data-provider="CityNameDP" finished-at="2020-08-10T09:36:01Z">
+      </class> <!-- com.tests.api.CompareWeatherDataTest -->
+      <class name="com.tests.web.NdtvPageTest">
+        <test-method status="PASS" signature="OpeNDTVUrlTest()[pri:0, instance:com.tests.web.NdtvPageTest@4a883b15]" name="OpeNDTVUrlTest" duration-ms="6734" started-at="2020-08-10T19:40:02Z" description="Open NDTV URL" finished-at="2020-08-10T19:40:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpeNDTVUrlTest -->
+        <test-method status="PASS" signature="NavigateToWeatherPageTest()[pri:0, instance:com.tests.web.NdtvPageTest@4a883b15]" name="NavigateToWeatherPageTest" duration-ms="486" started-at="2020-08-10T19:40:09Z" description="Navigate to weather page" finished-at="2020-08-10T19:40:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToWeatherPageTest -->
+        <test-method status="PASS" signature="GetWeatherDetailsOfSelectedCityTest(org.testng.ITestContext, java.lang.String)[pri:0, instance:com.tests.web.NdtvPageTest@4a883b15]" name="GetWeatherDetailsOfSelectedCityTest" duration-ms="2921" started-at="2020-08-10T19:40:09Z" description="Get weather details of selected city" data-provider="CityNameDP" finished-at="2020-08-10T19:40:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4bdeaabb]]>
+                <![CDATA[org.testng.TestRunner@1f9e9475]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mumbai]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetWeatherDetailsOfSelectedCityTest -->
+      </class> <!-- com.tests.web.NdtvPageTest -->
+      <class name="com.tests.api.OpenWeatherAPITest">
+        <test-method status="PASS" signature="GetWeatherDetails(org.testng.ITestContext, java.lang.String)[pri:0, instance:com.tests.api.OpenWeatherAPITest@3012646b]" name="GetWeatherDetails" duration-ms="2815" started-at="2020-08-10T19:40:12Z" description="Get Weather data from API" data-provider="CityNameDP" finished-at="2020-08-10T19:40:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1f9e9475]]>
               </value>
             </param>
             <param index="1">
@@ -72,7 +72,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetWeatherDetails -->
-      </class> <!-- com.tests.OpenWeatherAPITest -->
+      </class> <!-- com.tests.api.OpenWeatherAPITest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

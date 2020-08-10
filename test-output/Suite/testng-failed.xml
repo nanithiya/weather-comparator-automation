@@ -3,16 +3,11 @@
 <suite name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="com.tests.CompareWeatherDataTest">
+      <class name="com.tests.api.CompareWeatherDataTest">
         <methods>
           <include name="CompareWeather" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.tests.CompareWeatherDataTest -->
-      <class name="com.tests.WebPageTest">
-        <methods>
-          <include name="testSetUp"/>
-        </methods>
-      </class> <!-- com.tests.WebPageTest -->
+      </class> <!-- com.tests.api.CompareWeatherDataTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
