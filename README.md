@@ -1,4 +1,4 @@
-# Automated using Selenium with Java, RestAssured, TestNG and Maven-
+# Automated WEB and API using Selenium with Java, RestAssured, TestNG and Maven-
 This project compares weather reporting done by 2 sources.
 
 Source 1 : The website https://www.ndtv.com/.
