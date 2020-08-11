@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
+                    <span class="method-stats">5 methods, 3 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,12 +101,17 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.api.CompareWeatherDataTest" hash-for-method="CompareWeather(org.testng.TestRunner@280e8a1a, 2, 15)">CompareWeather(org.testng.TestRunner@280e8a1a, 2, 15)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.api.CompareWeatherDataTest" hash-for-method="CompareWeather(org.testng.TestRunner@c05fddc, 2, 15)">CompareWeather(org.testng.TestRunner@c05fddc, 2, 15)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.web.NdtvPageTest" hash-for-method="GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@280e8a1a, Mumbai)">GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@280e8a1a, Mumbai)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.web.NdtvPageTest" hash-for-method="GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@c05fddc, Mumbai)">GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@c05fddc, Mumbai)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.web.NdtvPageTest" hash-for-method="NavigateToWeatherPageTest">NavigateToWeatherPageTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -120,12 +125,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.api.OpenWeatherAPITest" hash-for-method="GetWeatherDetails(org.testng.TestRunner@280e8a1a, Mumbai)">GetWeatherDetails(org.testng.TestRunner@280e8a1a, Mumbai)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.web.NdtvPageTest" hash-for-method="NavigateToWeatherPageTest">NavigateToWeatherPageTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.api.OpenWeatherAPITest" hash-for-method="GetWeatherDetails(org.testng.TestRunner@c05fddc, Mumbai)">GetWeatherDetails(org.testng.TestRunner@c05fddc, Mumbai)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -148,17 +148,107 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">com.tests.web.NdtvPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@c05fddc, Mumbai)">
+                  </a> <!-- GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@c05fddc, Mumbai) -->
+                  <span class="method-name">GetWeatherDetailsOfSelectedCityTest</span>
+                  <span class="parameters">(org.testng.TestRunner@c05fddc, Mumbai)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@class=&apos;searchBox&apos;]&apos; (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.web.pages.NdtvPage.SearchCity(NdtvPage.java:51)
+	at com.tests.web.NdtvPageTest.GetWeatherDetailsOfSelectedCityTest(NdtvPageTest.java:34)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;searchBox&apos;]&quot;}
+  (Session info: chrome=84.0.4147.105)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;APPATHURAIN&apos;, ip: &apos;192.168.43.169&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\APPATH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60261}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 286a337cc03a4bc62ec4ea70cb3bc5a8
+*** Element info: {Using=xpath, value=//*[@class=&apos;searchBox&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 30 more
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Get weather details of selected city)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToWeatherPageTest">
+                  </a> <!-- NavigateToWeatherPageTest -->
+                  <span class="method-name">NavigateToWeatherPageTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;WEATHER&quot;}
+  (Session info: chrome=84.0.4147.105)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;APPATHURAIN&apos;, ip: &apos;192.168.43.169&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\APPATH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:60261}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 286a337cc03a4bc62ec4ea70cb3bc5a8
+*** Element info: {Using=link text, value=WEATHER}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at com.web.pages.NdtvPage.ClickWeatherMenu(NdtvPage.java:47)
+	at com.tests.web.NdtvPageTest.NavigateToWeatherPageTest(NdtvPageTest.java:27)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Navigate to weather page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">com.tests.api.CompareWeatherDataTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CompareWeather(org.testng.TestRunner@280e8a1a, 2, 15)">
-                  </a> <!-- CompareWeather(org.testng.TestRunner@280e8a1a, 2, 15) -->
+                  <a name="CompareWeather(org.testng.TestRunner@c05fddc, 2, 15)">
+                  </a> <!-- CompareWeather(org.testng.TestRunner@c05fddc, 2, 15) -->
                   <span class="method-name">CompareWeather</span>
-                  <span class="parameters">(org.testng.TestRunner@280e8a1a, 2, 15)</span>
-                  <div class="stack-trace">java.lang.NumberFormatException: empty String
-	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)
+                  <span class="parameters">(org.testng.TestRunner@c05fddc, 2, 15)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1838)
 	at sun.misc.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
 	at java.lang.Float.parseFloat(Float.java:451)
 	at com.tests.api.CompareWeatherDataTest.CompareWeather(CompareWeatherDataTest.java:21)
@@ -170,44 +260,12 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.tests.web.NdtvPageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@280e8a1a, Mumbai)">
-                  </a> <!-- GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@280e8a1a, Mumbai) -->
-                  <span class="method-name">GetWeatherDetailsOfSelectedCityTest</span>
-                  <span class="parameters">(org.testng.TestRunner@280e8a1a, Mumbai)</span>
-                  <div class="stack-trace">java.lang.AssertionError: Invalid city selected expected [true] but found [false]
-	at com.validators.Validator.ValidateResultWithErrMessage(Validator.java:8)
-	at com.tests.web.NdtvPageTest.GetWeatherDetailsOfSelectedCityTest(NdtvPageTest.java:39)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Get weather details of selected city)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.tests.web.NdtvPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="NavigateToWeatherPageTest">
-                  </a> <!-- NavigateToWeatherPageTest -->
-                  <span class="method-name">NavigateToWeatherPageTest</span>
-                  <em>
-(Navigate to weather page)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="OpeNDTVUrlTest">
@@ -227,10 +285,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="GetWeatherDetails(org.testng.TestRunner@280e8a1a, Mumbai)">
-                  </a> <!-- GetWeatherDetails(org.testng.TestRunner@280e8a1a, Mumbai) -->
+                  <a name="GetWeatherDetails(org.testng.TestRunner@c05fddc, Mumbai)">
+                  </a> <!-- GetWeatherDetails(org.testng.TestRunner@c05fddc, Mumbai) -->
                   <span class="method-name">GetWeatherDetails</span>
-                  <span class="parameters">(org.testng.TestRunner@280e8a1a, Mumbai)</span>
+                  <span class="parameters">(org.testng.TestRunner@c05fddc, Mumbai)</span>
                   <em>
 (Get Weather data from API)                  </em>
                 </div> <!-- method-content -->
@@ -293,21 +351,21 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'OpeNDTVUrlTest')
+data.setCell(0, 1, 'GetWeatherDetailsOfSelectedCityTest')
 data.setCell(0, 2, 'com.tests.web.NdtvPageTest')
-data.setCell(0, 3, 6755);
+data.setCell(0, 3, 30324);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'GetWeatherDetailsOfSelectedCityTest')
+data.setCell(1, 1, 'OpeNDTVUrlTest')
 data.setCell(1, 2, 'com.tests.web.NdtvPageTest')
-data.setCell(1, 3, 2680);
+data.setCell(1, 3, 3913);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'GetWeatherDetails')
 data.setCell(2, 2, 'com.tests.api.OpenWeatherAPITest')
-data.setCell(2, 3, 1884);
+data.setCell(2, 3, 1821);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'NavigateToWeatherPageTest')
 data.setCell(3, 2, 'com.tests.web.NdtvPageTest')
-data.setCell(3, 3, 580);
+data.setCell(3, 3, 357);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'CompareWeather')
 data.setCell(4, 2, 'com.tests.api.CompareWeatherDataTest')
@@ -316,7 +374,7 @@ window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 36 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -348,25 +406,27 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">NavigateToWeatherPageTest</span>
-                <span class="method-start">6756 ms</span>
+                <span class="method-start">3914 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@280e8a1a, Mumbai)</span>
-                <span class="method-start">7340 ms</span>
+                <span class="method-name">GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@c05fddc, Mumbai)</span>
+                <span class="method-start">4279 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10024 ms</span>
+                <span class="method-start">34604 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.api.OpenWeatherAPITest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">GetWeatherDetails(org.testng.TestRunner@280e8a1a, Mumbai)</span>
-                <span class="method-start">10802 ms</span>
+                <span class="method-name">GetWeatherDetails(org.testng.TestRunner@c05fddc, Mumbai)</span>
+                <span class="method-start">35419 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -374,8 +434,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">CompareWeather(org.testng.TestRunner@280e8a1a, 2, 15)</span>
-                <span class="method-start">12687 ms</span>
+                <span class="method-name">CompareWeather(org.testng.TestRunner@c05fddc, 2, 15)</span>
+                <span class="method-start">37241 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

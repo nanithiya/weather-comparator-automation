@@ -1,0 +1,4 @@
+# Created at 2020-08-11T11:24:57.987
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Automation\TestvagrantAssignment\weatherReporting\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
