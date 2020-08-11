@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,7 +101,12 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.api.CompareWeatherDataTest" hash-for-method="CompareWeather(org.testng.TestRunner@23811a09, 2, 15)">CompareWeather(org.testng.TestRunner@23811a09, 2, 15)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.api.CompareWeatherDataTest" hash-for-method="CompareWeather(org.testng.TestRunner@280e8a1a, 2, 15)">CompareWeather(org.testng.TestRunner@280e8a1a, 2, 15)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.web.NdtvPageTest" hash-for-method="GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@280e8a1a, Mumbai)">GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@280e8a1a, Mumbai)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -115,12 +120,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.api.OpenWeatherAPITest" hash-for-method="GetWeatherDetails(org.testng.TestRunner@23811a09, Mumbai)">GetWeatherDetails(org.testng.TestRunner@23811a09, Mumbai)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.web.NdtvPageTest" hash-for-method="GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@23811a09, Mumbai)">GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@23811a09, Mumbai)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.tests.api.OpenWeatherAPITest" hash-for-method="GetWeatherDetails(org.testng.TestRunner@280e8a1a, Mumbai)">GetWeatherDetails(org.testng.TestRunner@280e8a1a, Mumbai)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -153,19 +153,42 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CompareWeather(org.testng.TestRunner@23811a09, 2, 15)">
-                  </a> <!-- CompareWeather(org.testng.TestRunner@23811a09, 2, 15) -->
+                  <a name="CompareWeather(org.testng.TestRunner@280e8a1a, 2, 15)">
+                  </a> <!-- CompareWeather(org.testng.TestRunner@280e8a1a, 2, 15) -->
                   <span class="method-name">CompareWeather</span>
-                  <span class="parameters">(org.testng.TestRunner@23811a09, 2, 15)</span>
+                  <span class="parameters">(org.testng.TestRunner@280e8a1a, 2, 15)</span>
                   <div class="stack-trace">java.lang.NumberFormatException: empty String
 	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)
 	at sun.misc.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
 	at java.lang.Float.parseFloat(Float.java:451)
-	at com.tests.api.CompareWeatherDataTest.CompareWeather(CompareWeatherDataTest.java:22)
-... Removed 27 stack frames
+	at com.tests.api.CompareWeatherDataTest.CompareWeather(CompareWeatherDataTest.java:21)
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Compares weather reporting done by UI and API)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.tests.web.NdtvPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@280e8a1a, Mumbai)">
+                  </a> <!-- GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@280e8a1a, Mumbai) -->
+                  <span class="method-name">GetWeatherDetailsOfSelectedCityTest</span>
+                  <span class="parameters">(org.testng.TestRunner@280e8a1a, Mumbai)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Invalid city selected expected [true] but found [false]
+	at com.validators.Validator.ValidateResultWithErrMessage(Validator.java:8)
+	at com.tests.web.NdtvPageTest.GetWeatherDetailsOfSelectedCityTest(NdtvPageTest.java:39)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Get weather details of selected city)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -176,16 +199,6 @@
               <span class="class-name">com.tests.web.NdtvPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@23811a09, Mumbai)">
-                  </a> <!-- GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@23811a09, Mumbai) -->
-                  <span class="method-name">GetWeatherDetailsOfSelectedCityTest</span>
-                  <span class="parameters">(org.testng.TestRunner@23811a09, Mumbai)</span>
-                  <em>
-(Get weather details of selected city)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="NavigateToWeatherPageTest">
@@ -214,10 +227,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="GetWeatherDetails(org.testng.TestRunner@23811a09, Mumbai)">
-                  </a> <!-- GetWeatherDetails(org.testng.TestRunner@23811a09, Mumbai) -->
+                  <a name="GetWeatherDetails(org.testng.TestRunner@280e8a1a, Mumbai)">
+                  </a> <!-- GetWeatherDetails(org.testng.TestRunner@280e8a1a, Mumbai) -->
                   <span class="method-name">GetWeatherDetails</span>
-                  <span class="parameters">(org.testng.TestRunner@23811a09, Mumbai)</span>
+                  <span class="parameters">(org.testng.TestRunner@280e8a1a, Mumbai)</span>
                   <em>
 (Get Weather data from API)                  </em>
                 </div> <!-- method-content -->
@@ -282,28 +295,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'OpeNDTVUrlTest')
 data.setCell(0, 2, 'com.tests.web.NdtvPageTest')
-data.setCell(0, 3, 7003);
+data.setCell(0, 3, 6755);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'GetWeatherDetailsOfSelectedCityTest')
 data.setCell(1, 2, 'com.tests.web.NdtvPageTest')
-data.setCell(1, 3, 2645);
+data.setCell(1, 3, 2680);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'GetWeatherDetails')
 data.setCell(2, 2, 'com.tests.api.OpenWeatherAPITest')
-data.setCell(2, 3, 1979);
+data.setCell(2, 3, 1884);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'NavigateToWeatherPageTest')
 data.setCell(3, 2, 'com.tests.web.NdtvPageTest')
-data.setCell(3, 3, 965);
+data.setCell(3, 3, 580);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'CompareWeather')
 data.setCell(4, 2, 'com.tests.api.CompareWeatherDataTest')
-data.setCell(4, 3, 1);
+data.setCell(4, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -336,18 +349,24 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">NavigateToWeatherPageTest</span>
-                <span class="method-start">7004 ms</span>
+                <span class="method-start">6756 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@23811a09, Mumbai)</span>
-                <span class="method-start">7972 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">GetWeatherDetailsOfSelectedCityTest(org.testng.TestRunner@280e8a1a, Mumbai)</span>
+                <span class="method-start">7340 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">10024 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.api.OpenWeatherAPITest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">GetWeatherDetails(org.testng.TestRunner@23811a09, Mumbai)</span>
-                <span class="method-start">10618 ms</span>
+                <span class="method-name">GetWeatherDetails(org.testng.TestRunner@280e8a1a, Mumbai)</span>
+                <span class="method-start">10802 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -355,8 +374,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">CompareWeather(org.testng.TestRunner@23811a09, 2, 15)</span>
-                <span class="method-start">12597 ms</span>
+                <span class="method-name">CompareWeather(org.testng.TestRunner@280e8a1a, 2, 15)</span>
+                <span class="method-start">12687 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

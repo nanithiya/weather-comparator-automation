@@ -8,6 +8,12 @@
           <include name="CompareWeather" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.tests.api.CompareWeatherDataTest -->
+      <class name="com.tests.web.NdtvPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="GetWeatherDetailsOfSelectedCityTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.tests.web.NdtvPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

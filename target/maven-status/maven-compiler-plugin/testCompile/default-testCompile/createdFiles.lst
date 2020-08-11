@@ -2,6 +2,7 @@ com\tests\api\BaseAPITest.class
 com\tests\api\OpenWeatherAPITest.class
 com\tests\api\CompareWeatherDataTest.class
 com\validators\Validator.class
+com\tests\web\BaseWebTest.class
 com\tests\web\NdtvPageTest.class
 com\dataproviders\CompareWeatherDataProvider.class
 com\dataproviders\WeatherDataProvider.class

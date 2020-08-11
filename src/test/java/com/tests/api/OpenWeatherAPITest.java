@@ -23,7 +23,7 @@ public class OpenWeatherAPITest extends BaseAPITest {
 		// get city name from the response
 		String actualCityName = ApiResponseReader.GetValueFromResponse(response, "name");
 		// assert
-		Validator.ValidateEqual(actualCityName, city);
+		Validator.ValidateStringsEqual(actualCityName, city);
 		// read temperature and humidity from API response and set in context.
 		// Setting value in context will allow to access the value from another
 		// test class.

@@ -1,11 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.999 sec <<< FAILURE! - in TestSuite
-CompareWeather(com.tests.api.CompareWeatherDataTest)  Time elapsed: 0.007 sec  <<< FAILURE!
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 16.185 s <<< FAILURE! - in TestSuite
+GetWeatherDetailsOfSelectedCityTest(com.tests.web.NdtvPageTest)  Time elapsed: 2.685 s  <<< FAILURE!
+java.lang.AssertionError: Invalid city selected expected [true] but found [false]
+	at com.tests.web.NdtvPageTest.GetWeatherDetailsOfSelectedCityTest(NdtvPageTest.java:39)
+
+CompareWeather(com.tests.api.CompareWeatherDataTest)  Time elapsed: 0 s  <<< FAILURE!
 java.lang.NumberFormatException: empty String
-	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)
-	at sun.misc.FloatingDecimal.parseFloat(FloatingDecimal.java:122)
-	at java.lang.Float.parseFloat(Float.java:451)
-	at com.tests.api.CompareWeatherDataTest.CompareWeather(CompareWeatherDataTest.java:22)
+	at com.tests.api.CompareWeatherDataTest.CompareWeather(CompareWeatherDataTest.java:21)
 

@@ -18,7 +18,7 @@ public class NdtvPageTest extends BaseWebTest {
 		ndtvpage = new NdtvPage(driver);
 		ndtvpage.OpenNDTVUrl();
 		String expectedTitle = ndtvpage.GetHomePageTitle();
-		Validator.ValidateEqual(HomePageTitle, expectedTitle);
+		Validator.ValidateStringsEqual(HomePageTitle, expectedTitle);
 	}
 
 	@Test(priority = 2, description = "Navigate to weather page")
@@ -26,7 +26,7 @@ public class NdtvPageTest extends BaseWebTest {
 		ndtvpage.ClickSubMenu();
 		ndtvpage.ClickWeatherMenu();
 		String expectedTitle = ndtvpage.GetWeatherPageTitle();
-		Validator.ValidateEqual(WeatherPageTitle, expectedTitle);
+		Validator.ValidateStringsEqual(WeatherPageTitle, expectedTitle);
 	}
 
 	@Test(priority = 3, description = "Get weather details of selected city", dataProvider = "CityNameDP", dataProviderClass = WeatherDataProvider.class)
@@ -36,6 +36,6 @@ public class NdtvPageTest extends BaseWebTest {
 		ndtvpage.ClickPinCity(city);
 
 		String expectedCityName = ndtvpage.GetWeatherData(context);
-		Validator.ValidateResult(expectedCityName.contains(city), "Invalid city selected");
+		Validator.ValidateResultWithErrMessage(expectedCityName.contains(city), "Invalid city selected");
 	}
 }

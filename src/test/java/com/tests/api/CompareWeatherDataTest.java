@@ -26,14 +26,14 @@ public class CompareWeatherDataTest {
 		String tempErrorMessage = "Temprature difference between UI and API is greater than " + temperatureVariance;
 
 		// assert temperature result.
-		Validator.ValidateResult(tempResult, tempErrorMessage);
+		Validator.ValidateResultWithErrMessage(tempResult, tempErrorMessage);
 
 		// Check humidity with variance logic
 		boolean humidityResult = isVarianceOk(apiHumidity, webHumidity, humidityVariance);
 		String humidityErrorMessage = "Humidity difference between UI and API is greater than " + humidityVariance;
 
 		// assert humidity result.
-		Validator.ValidateResult(humidityResult, humidityErrorMessage);
+		Validator.ValidateResultWithErrMessage(humidityResult, humidityErrorMessage);
 	}
 
 	// Check the difference between UI and API is greater than expected variance
